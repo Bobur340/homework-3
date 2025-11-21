@@ -23,6 +23,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
+          context: .            
+          file: ./Dockerfile    
           push: true
           tags: mansurvc0001/cicd_github_actions:latest
-          file: ./Dockerfile 
